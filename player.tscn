@@ -1,0 +1,176 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://rifle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weaponcamera.gd" type="Script" id=3]
+[ext_resource path="res://gun-fire.gd" type="Script" id=4]
+[ext_resource path="res://crosshair.tscn" type="PackedScene" id=5]
+[ext_resource path="res://audio/817366_Koraii---Trick-Room.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/songs/underscores - the city with no wind.mp3" type="AudioStream" id=7]
+[ext_resource path="res://booper-mover.gd" type="Script" id=8]
+[ext_resource path="res://booper.tscn" type="PackedScene" id=9]
+[ext_resource path="res://audio/Explosions In The Sky - The Ecstatics (Official Video).wav" type="AudioStream" id=11]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "down"
+length = 235.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 235 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.1, -7 ), Vector3( 0, -7.2, -7 ) ]
+}
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SphereMesh" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 1, 0, 0, 0.792157 )
+
+[sub_resource type="CapsuleShape" id=7]
+height = 2.0
+
+[sub_resource type="CapsuleMesh" id=8]
+mid_height = 2.0
+
+[sub_resource type="Animation" id=9]
+resource_name = "explosion"
+length = 0.1
+step = 0.005
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Cambase/Spatial/explosion")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 1, 0.3, -3, 0, 0, 0, 1, 5.96046e-07, 5.96046e-07, 5.96046e-07, 0.005, 1, 1, 0.3, -5, 0, 0, 0, 1, 1, 1, 2, 0.07, 1, 1, 0.3, -5, 0, 0, 0, 1, 1, 1, 2, 0.075, 1, 1, 0.3, -6, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="player" type="KinematicBody"]
+script = ExtResource( 1 )
+cam_path = NodePath("Cambase")
+guno_path = NodePath("booper-hitter")
+
+[node name="trickroom" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, -1.98952e-13, 0, 1, 0, 1.98952e-13, 0, 1, 1.01698e-16, -1, 8.99949 )
+stream = ExtResource( 6 )
+
+[node name="song" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, -1.98952e-13, 0, 1, 0, 1.98952e-13, 0, 1, 1.01698e-16, -1, 8.99949 )
+stream = ExtResource( 11 )
+unit_db = 80.0
+
+[node name="booper-hitter" type="Area" parent="."]
+transform = Transform( 1, 0, -3.97904e-13, 0, 1, 0, 3.97904e-13, 0, 1, 1.39266e-12, 0, -14 )
+script = ExtResource( 4 )
+ray_path = NodePath("../Cambase/Spatial/RayCast")
+explo_path = NodePath("../Cambase/Spatial/explosion")
+
+[node name="CollisionShape" type="CollisionShape" parent="booper-hitter"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.244813, -1, 6.5 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="booper-hitter/CollisionShape"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+layers = 8
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="booper-mover" type="KinematicBody" parent="."]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -0.1, -7 )
+script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="booper-mover"]
+autoplay = "down"
+anims/down = SubResource( 3 )
+
+[node name="ecstatics" type="Spatial" parent="booper-mover"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06713, 0, 0 )
+
+[node name="bcbbbccc" type="Spatial" parent="booper-mover/ecstatics"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2, -1.49774, -5.72205e-06 )
+
+[node name="booper14" parent="booper-mover/ecstatics/bcbbbccc" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 0.003, 0, 0, 0, 1, -1.91189, 2.18283, -0.0609999 )
+layers = 8
+mesh = SubResource( 4 )
+
+[node name="booper10" parent="booper-mover/ecstatics/bcbbbccc" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 0.003, 0, 0, 0, 1, -1.91189, 1.90302, -0.0609999 )
+layers = 8
+mesh = SubResource( 4 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 600 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera" type="Camera" parent="ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+cull_mask = 6
+script = ExtResource( 3 )
+camera_path = NodePath("../../../Cambase/Camera")
+
+[node name="Cambase" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Cambase"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+cull_mask = 1048573
+fov = 90.0
+near = 0.01
+
+[node name="crosshair" parent="Cambase" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )
+
+[node name="Spatial" type="Spatial" parent="Cambase"]
+visible = false
+
+[node name="rifle2" parent="Cambase/Spatial" instance=ExtResource( 2 )]
+transform = Transform( -2.18557e-08, 0, -0.25, 0, 0.5, 0, 0.5, 0, -1.09278e-08, 1, 0.3, -2 )
+
+[node name="explosion" type="MeshInstance" parent="Cambase/Spatial"]
+transform = Transform( 5.96046e-07, 0, 0, 0, 5.96046e-07, 0, 0, 0, 5.96046e-07, 1, 0.3, -3 )
+layers = 2
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="RayCast" type="RayCast" parent="Cambase/Spatial"]
+transform = Transform( 1, 0, -1.98952e-13, 0, 1, 0, 1.98952e-13, 0, 1, 0, 0.799999, 1.19209e-07 )
+enabled = true
+cast_to = Vector3( 0, 0, -250 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/explosion = SubResource( 9 )
+
+[node name="songs" type="Spatial" parent="."]
+
+[node name="the_city_with_no_wind" type="AudioStreamPlayer3D" parent="songs"]
+stream = ExtResource( 7 )
+
+[connection signal="body_entered" from="booper-hitter" to="booper-hitter" method="_on_body_entered"]

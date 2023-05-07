@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/city_with_no_wind_cut_version.mp3-902295f85e97041ade937d1de0d80deb.mp3str"
+
+[deps]
+
+source_file="res://city_with_no_wind_cut_version.mp3"
+dest_files=[ "res://.import/city_with_no_wind_cut_version.mp3-902295f85e97041ade937d1de0d80deb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

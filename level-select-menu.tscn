@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/BWgridTexture.png" type="Texture" id=1]
+[ext_resource path="res://level-select-menu.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 64.0
+margin_right = 302.0
+margin_bottom = 288.0
+rect_scale = Vector2( 0.834165, 0.857073 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Tutorial"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 320.0
+margin_top = 64.0
+margin_right = 550.0
+margin_bottom = 288.0
+rect_scale = Vector2( 0.834165, 0.857073 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Level 1: The City With No Wind"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 300, 300 )
+scale = Vector2( 17.6429, 17.6429 )
+z_index = -1
+texture = ExtResource( 1 )
+
+[node name="bg2" type="Sprite" parent="."]
+position = Vector2( 900, 300 )
+scale = Vector2( 17.66, 17.66 )
+z_index = -1
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
