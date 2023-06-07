@@ -1,0 +1,984 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://players/player_fixed_move.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects-for-world/spike.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects-for-world/parkour-blck.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects-for-world/Barrel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enemy2.tscn" type="PackedScene" id=6]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0 )
+
+[node name="target" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 4, 4 )
+
+[node name="target2" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 4, 0 )
+
+[node name="target3" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 28, 8, 0 )
+
+[node name="target4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 32, 8, 4 )
+
+[node name="target5" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 32, 12, 24 )
+
+[node name="target6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4.56956e-08, 0, 1, 0, 1, 0, -1, 0, 4.56956e-08, 32, 12, 32 )
+
+[node name="target7" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1.33118e-07, 0, -1, 0, 1, 0, 1, 0, -1.33118e-07, 0, 16, 32 )
+
+[node name="target8" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1.33118e-07, 0, -1, 0, 1, 0, 1, 0, -1.33118e-07, 0, 16, 24 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, 4 )
+song = 1
+cty_player_path = NodePath("")
+last_checkpoint_pos = Vector3( 3, 2, 4 )
+
+[node name="environment" type="Spatial" parent="."]
+
+[node name="like floor etc" type="Spatial" parent="environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 40 )
+
+[node name="parkour-blck12" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -16, -28 )
+
+[node name="parkour-blck13" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, -28 )
+
+[node name="parkour-blck14" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, -36 )
+
+[node name="parkour-blck77" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -8, -44 )
+
+[node name="parkour-blck78" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -8, -44 )
+
+[node name="parkour-blck79" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -8, -44 )
+
+[node name="parkour-blck80" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 0, -44 )
+
+[node name="parkour-blck81" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 0, -44 )
+
+[node name="parkour-blck82" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 0, -44 )
+
+[node name="parkour-blck83" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 8, -44 )
+
+[node name="parkour-blck84" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 8, -44 )
+
+[node name="parkour-blck85" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 8, -44 )
+
+[node name="parkour-blck86" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 16, -44 )
+
+[node name="parkour-blck87" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 16, -44 )
+
+[node name="parkour-blck88" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 16, -44 )
+
+[node name="parkour-blck15" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, -36 )
+
+[node name="parkour-blck16" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, -36 )
+
+[node name="parkour-blck17" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, -28 )
+
+[node name="parkour-blck18" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, -28 )
+
+[node name="parkour-blck19" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, -20 )
+
+[node name="parkour-blck20" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, -20 )
+
+[node name="parkour-blck21" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, -12 )
+
+[node name="parkour-blck22" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, -12 )
+
+[node name="parkour-blck23" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, -12 )
+
+[node name="parkour-blck24" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, -20 )
+
+[node name="parkour-blck25" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -16, -20 )
+
+[node name="parkour-blck26" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -16, -12 )
+
+[node name="parkour-blck27" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -16, -4 )
+
+[node name="parkour-blck28" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -16, 4 )
+
+[node name="parkour-blck44" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -16, 12 )
+
+[node name="parkour-blck31" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, 4 )
+
+[node name="parkour-blck32" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, -4 )
+
+[node name="parkour-blck33" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, -4 )
+
+[node name="parkour-blck34" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, -4 )
+
+[node name="parkour-blck35" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, 4 )
+
+[node name="parkour-blck36" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, 4 )
+
+[node name="parkour-blck37" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -16, 12 )
+
+[node name="parkour-blck38" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -16, 12 )
+
+[node name="parkour-blck39" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -16, 12 )
+
+[node name="parkour-blck40" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, -8, 20 )
+
+[node name="parkour-blck43" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 0, 20 )
+
+[node name="parkour-blck41" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, -8, 20 )
+
+[node name="parkour-blck42" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -8, 20 )
+
+[node name="parkour-blck123" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 0, 20 )
+
+[node name="parkour-blck124" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 0, 20 )
+
+[node name="parkour-blck125" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 8, 20 )
+
+[node name="parkour-blck126" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 8, 20 )
+
+[node name="parkour-blck127" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 8, 20 )
+
+[node name="parkour-blck128" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 16, 20 )
+
+[node name="parkour-blck129" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 16, 20 )
+
+[node name="parkour-blck91" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, -36 )
+
+[node name="parkour-blck92" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, -28 )
+
+[node name="parkour-blck93" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, -20 )
+
+[node name="parkour-blck94" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, -12 )
+
+[node name="parkour-blck95" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, -4 )
+
+[node name="parkour-blck96" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, 4 )
+
+[node name="parkour-blck97" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, 12 )
+
+[node name="parkour-blck98" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, -8, 20 )
+
+[node name="parkour-blck99" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, -36 )
+
+[node name="parkour-blck100" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, -28 )
+
+[node name="parkour-blck101" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, -20 )
+
+[node name="parkour-blck102" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, -12 )
+
+[node name="parkour-blck103" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, -4 )
+
+[node name="parkour-blck104" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, 4 )
+
+[node name="parkour-blck105" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, 12 )
+
+[node name="parkour-blck106" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 0, 20 )
+
+[node name="parkour-blck107" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, -36 )
+
+[node name="parkour-blck108" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, -28 )
+
+[node name="parkour-blck109" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, -20 )
+
+[node name="parkour-blck110" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, -12 )
+
+[node name="parkour-blck111" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, -4 )
+
+[node name="parkour-blck112" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, 4 )
+
+[node name="parkour-blck113" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, 12 )
+
+[node name="parkour-blck114" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 8, 20 )
+
+[node name="parkour-blck115" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, -36 )
+
+[node name="parkour-blck116" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, -28 )
+
+[node name="parkour-blck117" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, -20 )
+
+[node name="parkour-blck118" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, -12 )
+
+[node name="parkour-blck119" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, -4 )
+
+[node name="parkour-blck120" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, 4 )
+
+[node name="parkour-blck121" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, 12 )
+
+[node name="parkour-blck122" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 16, 20 )
+
+[node name="parkour-blck29" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -8, 20 )
+
+[node name="parkour-blck45" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, -8, 12 )
+
+[node name="parkour-blck46" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, -8, 4 )
+
+[node name="parkour-blck47" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, -8, -4 )
+
+[node name="parkour-blck48" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, -8, -12 )
+
+[node name="parkour-blck49" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, -8, -20 )
+
+[node name="parkour-blck50" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, -8, -28 )
+
+[node name="parkour-blck53" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, 12 )
+
+[node name="parkour-blck54" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, 4 )
+
+[node name="parkour-blck55" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, -4 )
+
+[node name="parkour-blck56" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, -12 )
+
+[node name="parkour-blck57" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, -20 )
+
+[node name="parkour-blck58" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, -28 )
+
+[node name="parkour-blck60" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, 4 )
+
+[node name="parkour-blck61" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -4 )
+
+[node name="parkour-blck62" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -12 )
+
+[node name="parkour-blck63" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -20 )
+
+[node name="parkour-blck64" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -28 )
+
+[node name="parkour-blck51" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 0, -36 )
+
+[node name="parkour-blck59" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -36 )
+
+[node name="parkour-blck65" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, 4 )
+
+[node name="parkour-blck66" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -4 )
+
+[node name="parkour-blck67" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -12 )
+
+[node name="parkour-blck68" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -20 )
+
+[node name="parkour-blck69" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -28 )
+
+[node name="parkour-blck70" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 8, -36 )
+
+[node name="parkour-blck71" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, -4 )
+
+[node name="parkour-blck72" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, -12 )
+
+[node name="parkour-blck73" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, -20 )
+
+[node name="parkour-blck74" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, -28 )
+
+[node name="parkour-blck75" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, 4 )
+
+[node name="parkour-blck76" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, -36 )
+
+[node name="parkour-blck52" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 0, -44 )
+
+[node name="parkour-blck89" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 8, -44 )
+
+[node name="parkour-blck90" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 16, -44 )
+
+[node name="parkour-blck30" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 0, 20 )
+
+[node name="parkour-blck130" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 24.3216, -44 )
+
+[node name="parkour-blck131" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 24.3216, -44 )
+
+[node name="parkour-blck132" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 24.3216, -44 )
+
+[node name="parkour-blck133" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 24.3216, 20 )
+
+[node name="parkour-blck134" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 24.3216, 20 )
+
+[node name="parkour-blck135" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, -36 )
+
+[node name="parkour-blck136" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, -28 )
+
+[node name="parkour-blck137" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, -20 )
+
+[node name="parkour-blck138" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, -12 )
+
+[node name="parkour-blck139" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, -4 )
+
+[node name="parkour-blck140" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, 4 )
+
+[node name="parkour-blck141" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, 12 )
+
+[node name="parkour-blck142" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 24.3216, 20 )
+
+[node name="parkour-blck143" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, -4 )
+
+[node name="parkour-blck144" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, -12 )
+
+[node name="parkour-blck145" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, -20 )
+
+[node name="parkour-blck146" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, -28 )
+
+[node name="parkour-blck147" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, 4 )
+
+[node name="parkour-blck148" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, -36 )
+
+[node name="parkour-blck149" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 24.3216, -44 )
+
+[node name="parkour-blck150" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 32.3216, -44 )
+
+[node name="parkour-blck151" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 32.3216, -44 )
+
+[node name="parkour-blck152" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 32.3216, -44 )
+
+[node name="parkour-blck153" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 32.3216, 20 )
+
+[node name="parkour-blck154" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 32.3216, 20 )
+
+[node name="parkour-blck155" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, -36 )
+
+[node name="parkour-blck156" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, -28 )
+
+[node name="parkour-blck157" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, -20 )
+
+[node name="parkour-blck158" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, -12 )
+
+[node name="parkour-blck159" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, -4 )
+
+[node name="parkour-blck160" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, 4 )
+
+[node name="parkour-blck161" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, 12 )
+
+[node name="parkour-blck162" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 32.3216, 20 )
+
+[node name="parkour-blck163" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, -4 )
+
+[node name="parkour-blck164" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, -12 )
+
+[node name="parkour-blck165" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, -20 )
+
+[node name="parkour-blck166" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, -28 )
+
+[node name="parkour-blck167" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, 4 )
+
+[node name="parkour-blck168" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, -36 )
+
+[node name="parkour-blck169" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 32.3216, -44 )
+
+[node name="parkour-blck170" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 40.3216, -44 )
+
+[node name="parkour-blck171" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 40.3216, -44 )
+
+[node name="parkour-blck172" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 40.3216, -44 )
+
+[node name="parkour-blck173" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 20, 40.3216, 20 )
+
+[node name="parkour-blck174" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 40.3216, 20 )
+
+[node name="parkour-blck175" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, -36 )
+
+[node name="parkour-blck176" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, -28 )
+
+[node name="parkour-blck177" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, -20 )
+
+[node name="parkour-blck178" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, -12 )
+
+[node name="parkour-blck179" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, -4 )
+
+[node name="parkour-blck180" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, 4 )
+
+[node name="parkour-blck181" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, 12 )
+
+[node name="parkour-blck182" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 36, 40.3216, 20 )
+
+[node name="parkour-blck183" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, -4 )
+
+[node name="parkour-blck184" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, -12 )
+
+[node name="parkour-blck185" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, -20 )
+
+[node name="parkour-blck186" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, -28 )
+
+[node name="parkour-blck187" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, 4 )
+
+[node name="parkour-blck188" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, -36 )
+
+[node name="parkour-blck189" parent="environment/like floor etc" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 40.3216, -44 )
+
+[node name="blocks2" type="Spatial" parent="environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 40 )
+
+[node name="parkour-blck7" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, -4, -36 )
+
+[node name="parkour-blck8" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 28, 0, -12 )
+
+[node name="parkour-blck9" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 4, -12 )
+
+[node name="parkour-blck10" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 8, 12 )
+
+[node name="parkour-blck11" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 8, 20 )
+
+[node name="parkour-blck12" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 16, 28 )
+
+[node name="parkour-blck13" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 16, 20 )
+
+[node name="parkour-blck14" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, 20 )
+
+[node name="parkour-blck15" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 16, 12 )
+
+[node name="parkour-blck5" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, -8, -36 )
+
+[node name="parkour-blck16" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 24.3216, 28 )
+
+[node name="parkour-blck17" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 24.3216, 20 )
+
+[node name="parkour-blck18" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, 20 )
+
+[node name="parkour-blck19" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 24.3216, 12 )
+
+[node name="parkour-blck20" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 32.3216, 28 )
+
+[node name="parkour-blck21" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 32.3216, 20 )
+
+[node name="parkour-blck22" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, 20 )
+
+[node name="parkour-blck23" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 32.3216, 12 )
+
+[node name="parkour-blck24" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 4, 40.3216, 28 )
+
+[node name="parkour-blck25" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, 12, 40.3216, 20 )
+
+[node name="parkour-blck26" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, 20 )
+
+[node name="parkour-blck27" parent="environment/blocks2" instance=ExtResource( 3 )]
+transform = Transform( 4, 0, 0, 0, -4, -6.03983e-07, 0, 6.03983e-07, -4, -4, 40.3216, 12 )
+
+[node name="spikes" type="Spatial" parent="environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2 )
+
+[node name="Spatial" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 20 )
+
+[node name="Spatial2" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 20 )
+
+[node name="Spatial3" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 20 )
+
+[node name="Spatial4" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 20 )
+
+[node name="Spatial5" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 20 )
+
+[node name="Spatial6" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 20 )
+
+[node name="Spatial7" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 24 )
+
+[node name="Spatial8" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 24 )
+
+[node name="Spatial9" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 24 )
+
+[node name="Spatial10" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 24 )
+
+[node name="Spatial11" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 24 )
+
+[node name="Spatial12" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 24 )
+
+[node name="Spatial13" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 28 )
+
+[node name="Spatial14" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 28 )
+
+[node name="Spatial19" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 28 )
+
+[node name="Spatial20" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 28 )
+
+[node name="Spatial25" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 20 )
+
+[node name="Spatial26" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 20 )
+
+[node name="Spatial27" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 16 )
+
+[node name="Spatial28" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 16 )
+
+[node name="Spatial29" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 16 )
+
+[node name="Spatial30" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 16 )
+
+[node name="Spatial31" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 16 )
+
+[node name="Spatial32" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 16 )
+
+[node name="Spatial33" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 16 )
+
+[node name="Spatial34" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 16 )
+
+[node name="Spatial35" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 12 )
+
+[node name="Spatial36" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 12 )
+
+[node name="Spatial37" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 12 )
+
+[node name="Spatial38" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 12 )
+
+[node name="Spatial39" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 12 )
+
+[node name="Spatial40" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 12 )
+
+[node name="Spatial91" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 8 )
+
+[node name="Spatial92" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 8 )
+
+[node name="Spatial93" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 8 )
+
+[node name="Spatial94" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 4 )
+
+[node name="Spatial95" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 0 )
+
+[node name="Spatial96" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 0 )
+
+[node name="Spatial97" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 0 )
+
+[node name="Spatial98" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 0 )
+
+[node name="Spatial99" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 0 )
+
+[node name="Spatial100" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 0 )
+
+[node name="Spatial101" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 4 )
+
+[node name="Spatial102" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 8 )
+
+[node name="Spatial103" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 8 )
+
+[node name="Spatial104" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 8 )
+
+[node name="Spatial105" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 8 )
+
+[node name="Spatial106" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 8 )
+
+[node name="Spatial107" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 4 )
+
+[node name="Spatial108" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 4 )
+
+[node name="Spatial109" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 4 )
+
+[node name="Spatial110" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 4 )
+
+[node name="Spatial41" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 12 )
+
+[node name="Spatial42" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 12 )
+
+[node name="Spatial43" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 32 )
+
+[node name="Spatial44" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 32 )
+
+[node name="Spatial45" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 32 )
+
+[node name="Spatial46" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 32 )
+
+[node name="Spatial47" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 32 )
+
+[node name="Spatial48" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 32 )
+
+[node name="Spatial49" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 32 )
+
+[node name="Spatial50" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 32 )
+
+[node name="Spatial51" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 36 )
+
+[node name="Spatial52" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 36 )
+
+[node name="Spatial53" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 36 )
+
+[node name="Spatial54" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 36 )
+
+[node name="Spatial55" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 36 )
+
+[node name="Spatial56" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 36 )
+
+[node name="Spatial57" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 36 )
+
+[node name="Spatial58" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 36 )
+
+[node name="Spatial59" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 40 )
+
+[node name="Spatial60" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 40 )
+
+[node name="Spatial61" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 40 )
+
+[node name="Spatial62" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 40 )
+
+[node name="Spatial63" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 40 )
+
+[node name="Spatial64" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 40 )
+
+[node name="Spatial65" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 40 )
+
+[node name="Spatial66" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 40 )
+
+[node name="Spatial67" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 44 )
+
+[node name="Spatial68" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 44 )
+
+[node name="Spatial69" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 44 )
+
+[node name="Spatial70" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 44 )
+
+[node name="Spatial71" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 44 )
+
+[node name="Spatial72" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 44 )
+
+[node name="Spatial73" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 44 )
+
+[node name="Spatial74" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 44 )
+
+[node name="Spatial75" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 48 )
+
+[node name="Spatial76" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 48 )
+
+[node name="Spatial77" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 48 )
+
+[node name="Spatial78" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 48 )
+
+[node name="Spatial79" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 48 )
+
+[node name="Spatial80" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 48 )
+
+[node name="Spatial81" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 48 )
+
+[node name="Spatial82" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 48 )
+
+[node name="Spatial83" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17, -6, 52 )
+
+[node name="Spatial84" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21, -6, 52 )
+
+[node name="Spatial85" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 52 )
+
+[node name="Spatial86" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 52 )
+
+[node name="Spatial87" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 52 )
+
+[node name="Spatial88" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 52 )
+
+[node name="Spatial89" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 52 )
+
+[node name="Spatial90" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 52 )
+
+[node name="Spatial21" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 24 )
+
+[node name="Spatial22" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 24 )
+
+[node name="Spatial23" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25, -6, 24 )
+
+[node name="Spatial24" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 29, -6, 24 )
+
+[node name="Spatial15" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -6, 28 )
+
+[node name="Spatial16" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5, -6, 28 )
+
+[node name="Spatial17" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13, -6, 28 )
+
+[node name="Spatial18" parent="environment/spikes" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 9, -6, 28 )
+
+[node name="Barrel_03" parent="." instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 4, 0, 0, 0, 5, 5, 18, 60 )

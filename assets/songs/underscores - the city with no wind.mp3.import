@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/underscores - the city with no wind.mp3-3fda488a01995e0ce4fdfcced883e897.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/underscores - the city with no wind.mp3"
+dest_files=[ "res://.import/underscores - the city with no wind.mp3-3fda488a01995e0ce4fdfcced883e897.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

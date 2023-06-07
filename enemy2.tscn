@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://target.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+
+[node name="enemy" type="StaticBody" groups=[
+"enemy",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.177, 2.35512, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -8.74228e-09, -1, 0, 0.2, -4.37114e-08, 0, 0, -0.1 )
+shape = SubResource( 1 )
+
+[node name="target" parent="." instance=ExtResource( 1 )]
